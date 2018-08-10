@@ -7,6 +7,6 @@ class CreateSteps < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :chapters, [:chapter_id, :created_at]
+    add_index :chapters, [:id, :created_at]
   end
 end

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180810171351) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index [nil, "created_at"], name: "index_chapters_on_chapter_id_and_created_at"
+    t.index ["id", "created_at"], name: "index_chapters_on_id_and_created_at"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20180810171351) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chapter_id"], name: "index_steps_on_chapter_id"
-    t.index [nil, "created_at"], name: "index_steps_on_step_id_and_created_at"
+    t.index ["id", "created_at"], name: "index_steps_on_id_and_created_at"
   end
 
   create_table "users", force: :cascade do |t|
