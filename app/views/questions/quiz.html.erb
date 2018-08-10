@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= @question.title %></strong>
+</p>
+
+<p>
+	In reference to: <%= @question.step.title %>
+</p>
+
+
+
+<% @choices.each do |choice| %>
+	<%= choice['statement'] %> <br>
+
+	<% choice['options'].each do |option| %>
+		<%= option %><br>
+	<% end %><br>
+
+<% end %>
+
+
+
+<%= link_to 'Next', {:chapter => 1, :step => 1, :id => @question.id + 1} %>

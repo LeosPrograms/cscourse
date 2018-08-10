@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Course Plan</h1>
+
+
+<ul>
+  <% @chapters.each do |chapter| %>
+    <li><%= link_to chapter.title, chapter %></li>
+  <% end %>
+</ul>

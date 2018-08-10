@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h3>	<%= link_to @step.chapter.title, chapter_path(@step.chapter) %></h3>
+</p>
+
+<p>
+  <strong><%= @step.title %></strong>
+</p>
+
+<p>
+  Watch the following video before moving on:
+</p>
+
+<iframe src=<%= @step.media %> width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
+
+
+<div type="button">Next: <%= link_to @questions.first.title, @questions.first %></div>

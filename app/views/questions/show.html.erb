@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h3><%= @question.title %></h3>
+</p>
+
+<p>
+	In reference to: <strong><%= @question.step.title %></strong>
+</p>
+
+
+
+
+<% if @question.style == 'MC' %>
+	<%= form_with(model: @question, local: true) do |form| %>
+
+		<% @choices.each do |choice| %>
+			<strong><%= choice['statement'] %> </strong><br>
+
+			<% choice['options'].each do |option| %>
+	    	<%= form.check_box :choice['statement'], { multiple: false }, option %>
+				<%= option %><br>
+
+			<% end %><br>
+
+		<% end %>
+	<% end %>
+<% end %>
+
+
+<% if @question.style == 'SA' %>
+	<strong><%= @question.instructions %> </strong><br>
+	<%= form_with(model: @question, local: true) do |form| %>
+		<textarea cols="100" rows="20">
+
+    </textarea>
+	<% end %>
+<% end %>
+
+
+
+
+
+
+<% if @first %>
+	<%= link_to "Back to lesson", step_path(@question.step) %><br>
+<% else %>
+	<%= link_to 'Previous', {:id => @question.id - 1} %>
+<% end %>
+
+<% if @last %>
+	<%= link_to "Save and finish", chapter_path(@question.step.chapter) %><br>
+<% else %>
+	<%= link_to 'Save anc continue', {:id => @question.id + 1} %>
+<% end %>

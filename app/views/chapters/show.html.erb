@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <strong>Title:</strong>
+  <%= @chapter.title %>
+</h2>
+
+<h3>Lessons</h3>
+
+<ol>
+  <% @steps.each do |step| %>
+    <li><%= link_to step.title, step %></li>
+  <% end %>
+</ol>
+
+<%= link_to 'Back to all chapters', chapters_path %>

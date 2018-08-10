@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :questions
+  # get    'go/:chapter/:step/:id',  to: 'questions#show'
+
+  resources :steps
+  resources :chapters
   get 'password_resets/new'
 
   get 'password_resets/edit'

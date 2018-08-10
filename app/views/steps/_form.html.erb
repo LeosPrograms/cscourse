@@ -1,0 +1,32 @@
+<%= form_with(model: step, local: true) do |form| %>
+  <% if step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(step.errors.count, "error") %> prohibited this step from being saved:</h2>
+
+      <ul>
+      <% step.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :step_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :media %>
+    <%= form.text_field :media, id: :step_media %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chapter_id %>
+    <%= form.text_field :chapter_id, id: :step_chapter_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
