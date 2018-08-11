@@ -1,16 +1,20 @@
+<div class="container centered course-container">
+
+
 <p id="notice"><%= notice %></p>
 
-<h2>
-  <strong>Title:</strong>
-  <%= @chapter.title %>
-</h2>
+<h1>
+    <%= @chapter.title %>
+</h1>
 
 <h3>Lessons</h3>
 
-<ol>
   <% @steps.each do |step| %>
-    <li><%= link_to step.title, step %></li>
+    <div class="card-main course-card">
+    	<h2><%=step.title%></h2><div class="button step-button"><%= link_to "start", step %></div>
+  	</div>
   <% end %>
-</ol>
 
 <%= link_to 'Back to all chapters', chapters_path %>
+
+</div>

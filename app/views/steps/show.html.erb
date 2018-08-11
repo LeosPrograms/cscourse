@@ -1,12 +1,12 @@
+<div class="container centered course-container">
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <h3>	<%= link_to @step.chapter.title, chapter_path(@step.chapter) %></h3>
-</p>
+<!-- <h1>	<%= link_to @step.chapter.title, chapter_path(@step.chapter) %></h1> -->
 
-<p>
+<h3>
   <strong><%= @step.title %></strong>
-</p>
+</h3>
 
 <p>
   Watch the following video before moving on:
@@ -16,3 +16,5 @@
 
 
 <div type="button">Next: <%= link_to @questions.first.title, @questions.first %></div>
+
+</div>

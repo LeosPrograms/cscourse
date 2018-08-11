@@ -1,3 +1,27 @@
 // Place all the styles related to the Static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.opener {
+  text-align: center;
+  width: 100%;
+}
+
+a:hover {
+	opacity: 0.8;
+  color: #fff;
+  text-decoration: none;
+}
+
+.start-button a {
+  font-size: 1em;
+  padding: 2rem 3.5rem;
+}
+
+p.front {
+  padding-bottom: 4.375rem;
+	font-size: 1.425rem;
+  letter-spacing: 0.2px;
+  color: rgba(74,74,74,0.7);
+}

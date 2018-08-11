@@ -1,3 +1,27 @@
 // Place all the styles related to the chapters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-main {
+  -webkit-box-shadow: 0 5px 16px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 5px 16px 0 rgba(0,0,0,0.1);
+  background-color: #fff;
+  margin-bottom: 40px;
+  padding: 40px 60px;
+  position: relative;
+}
+
+.course-card {
+	margin-right: 10vw;
+	margin-left: 10vw;
+}
+
+.chapter-button a {
+	margin: 1em;
+  font-size: 1em;
+  padding: 10px 20px;
+}
+
+.step-button a {
+  padding: 0.5em 1em;
+}
