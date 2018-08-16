@@ -188,7 +188,7 @@ c1 = Chapter.create!(title:  "CHAPTER 1: RACISM LITERACY")
                                   ]')
   c1s7 = Step.create!(title:  "California Newsreel. (2003).",
                       instructions: "California Newsreel. (2003). RACE: The Power of an Illusion.   Read through the six tabs on this website and do the exercises. You may have to download Adobe Flash Player 6 to do the exercises.  When you are finished take the quiz.",
-                      media: "http://www.pbs.org/race/000_General/000_00-Home.htm", chapter: c1)
+                      media2: "http://www.pbs.org/race/000_General/000_00-Home.htm", chapter: c1)
     c1s7q1 = Question.create!(title: "California Newsreel. (2003).", style: 'MC', step: c1s7,
                       choices: '[{"statement": "question",
                                   "options": ["option 1", "option 2", "option 3"]},
@@ -208,7 +208,7 @@ c2 = Chapter.create!(title:  "CHAPTER 2: PRIVILEGE")
   c2s3 = Step.create!(title:  "Privilege Walk", media: "https://www.youtube.com/embed/Kr3WM9Iadhk", chapter: c2)
     c2s3q1 = Question.create!(title: "Privilege Walk", style: 'SA', step: c2s3,
                       instructions: 'Watch "The privilege walk" and participate in the walk yourself as you watch. Make sure you watch it in a space where you have room to move. This exercise is best done with others but you can also do it on your own while watching the video clip.')
-  c2s4 = Step.create!(title:  "Unpacking the invisible birth knapsack", media: "", chapter: c2)
+  c2s4 = Step.create!(title:  "Unpacking the invisible birth knapsack", chapter: c2)
     c2s4q1 = Question.create!(title: "Unpacking the invisible birth knapsack", style: 'SA', step: c2s4,
                       instructions: "TBD")
 

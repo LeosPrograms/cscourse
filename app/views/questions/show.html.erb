@@ -53,15 +53,15 @@
 
 
 <% if @first %>
-	<%= link_to "Back to lesson", step_path(@question.step) %>
+	<%= link_to "Back to lesson", step_path(@question.step), { :class=>"link-left" } %>
 <% else %>
-	<br><%= link_to 'Previous', {:id => @question.id - 1} %>
+	<%= link_to 'Previous', {:id => @question.id - 1}, { :class=>"link-left" } %>
 <% end %>
 
 <% if @last %>
-	<br><%= link_to "Save and finish", chapter_path(@question.step.chapter) %>
+	<%= link_to "Save and finish", chapter_path(@question.step.chapter), { :class=>"link-right" } %>
 <% else %>
-	<br><%= link_to 'Save and continue', {:id => @question.id + 1} %>
+	<%= link_to 'Save and continue', {:id => @question.id + 1}, { :class=>"link-right" } %>
 <% end %>
 
 </div>

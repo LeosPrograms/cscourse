@@ -14,6 +14,9 @@
  *= require_self
  */
 
+* {
+  font-family: Verdana;
+}
 
 body {
   margin: 0;
@@ -48,10 +51,24 @@ body {
 
 h1 {
   margin-top: 2em;
-  color: #007184;
+  color: #0050c7;
   margin-bottom: 0;
   padding-bottom: 1.875rem;
   font-weight: 300;
   letter-spacing: 0.4px;
   padding-bottom: 1.875rem;
+}
+
+h3 {
+  color: #0050c7;
+}
+
+.link-left {
+  display: inline-block;
+  float: left;
+}
+
+.link-right {
+  display: inline-block;
+  float: right;
 }

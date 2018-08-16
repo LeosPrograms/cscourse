@@ -12,12 +12,25 @@
   Watch the following before moving on:
 </p>
 
-<iframe src=<%= @step.media %> width="760" height="515" frameborder="0" allowfullscreen=""></iframe>
-
 <% if @step.media2 %>
-	<iframe src=<%= @step.media2 %> width="760" height="515" frameborder="0" allowfullscreen=""></iframe>
+	<% if @step.media %>
+		First video: <a href="<%= @step.media %>" target="_blank"><%= @step.media %></a><br>
+		Second video: <a href="<%= @step.media2 %>" target="_blank"><%= @step.media2 %></a><br><br>
+	<% else %>
+		Link to video: <a href="<%= @step.media2 %>" target="_blank"><%= @step.media2 %></a><br><br>
+	<% end %>
+
+<% elsif @step.media %>
+	<iframe src=<%= @step.media %> width="760" height="515" frameborder="0" allowfullscreen=""></iframe>
+
+<% else %>
+	Video not yet uploaded<br><br>
 <% end %>
 
-<div type="button">Next: <%= link_to @questions.first.title, @questions.first %></div>
+
+<div class="bottom-links">
+	<%= link_to "Back to chapter", chapter_path(@step.chapter), { :class=>"link-left" } %>
+	<div type="button" class="link-right">Next: &nbsp; <%= link_to @questions.first.title, @questions.first, { :class=>"link-right" } %></div>
+</div>
 
 </div>
