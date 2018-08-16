@@ -38,18 +38,26 @@
 <% end %>
 
 
+<% if @question.style == 'MA' %>
+	<strong><%= @question.instructions %> </strong><br>
+	<% @choices['items'].each do |item| %>
+		<p><%= item %></p>
+		<%= select_tag "city", options_for_select(@choices['definitions']) %><br><br>
+	<% end %>
+<% end %>
+
 
 
 
 
 <% if @first %>
-	<%= link_to "Back to lesson", step_path(@question.step) %><br>
+	<%= link_to "Back to lesson", step_path(@question.step) %>
 <% else %>
-	<%= link_to 'Previous', {:id => @question.id - 1} %>
+	<br><%= link_to 'Previous', {:id => @question.id - 1} %>
 <% end %>
 
 <% if @last %>
-	<%= link_to "Save and finish", chapter_path(@question.step.chapter) %><br>
+	<br><%= link_to "Save and finish", chapter_path(@question.step.chapter) %>
 <% else %>
-	<%= link_to 'Save anc continue', {:id => @question.id + 1} %>
+	<br><%= link_to 'Save and continue', {:id => @question.id + 1} %>
 <% end %>

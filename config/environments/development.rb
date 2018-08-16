@@ -57,4 +57,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'ALLOWALL'
+  }
+
 end

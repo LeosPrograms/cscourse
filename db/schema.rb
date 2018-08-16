@@ -32,7 +32,9 @@ ActiveRecord::Schema.define(version: 20180810171351) do
 
   create_table "steps", force: :cascade do |t|
     t.string "title"
+    t.text "instructions"
     t.string "media"
+    t.string "media2"
     t.integer "chapter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
