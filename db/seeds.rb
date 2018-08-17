@@ -199,8 +199,8 @@ c1 = Chapter.create!(title:  "CHAPTER 1: RACISM LITERACY")
 
 
 c2 = Chapter.create!(title:  "CHAPTER 2: PRIVILEGE")
-  c2s1 = Step.create!(title:  "The Danger of a Single Story", media: " https://www.youtube.com/embed/DwIx3KQer54", chapter: c2)
-    c2s1q1 = Question.create!(title: "The Danger of a Single Story", style: 'SA', step: c2s1,
+  c2s1 = Step.create!(title:  "decontstructing white privilege", media: " https://www.youtube.com/embed/DwIx3KQer54", chapter: c2)
+    c2s1q1 = Question.create!(title: "decontstructing white privilege", style: 'SA', step: c2s1,
                       instructions: "Do you have any feeling that come up from watching this? Is there anything that is new to you? Is there anything that challenged you?")
   c2s2 = Step.create!(title:  "Unpacking the invisible knapsack", media: "https://www.youtube.com/embed/DRnoddGTMTY", chapter: c2)
     c2s2q1 = Question.create!(title: "Unpacking the invisible knapsack", style: 'SA', step: c2s2,
