@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20180810171351) do
 
   create_table "chapters", force: :cascade do |t|
     t.string "title"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["id", "created_at"], name: "index_chapters_on_id_and_created_at"

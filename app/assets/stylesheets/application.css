@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ /*
+ *= require font-awesome
+ */
+
 * {
   font-family: Verdana;
 }
@@ -60,7 +64,7 @@ h1 {
 }
 
 h3 {
-  color: #0050c7;
+  /*color: #0050c7;*/
 }
 
 .link-left {

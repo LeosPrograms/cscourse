@@ -3,11 +3,26 @@
 <div class="container centered course-container">
 	<h1>Curriculum</h1>
 
+    <div class="card-main course-card">
+    	<h2>Introduction to Cultural Safety in Midwifery Care</h2> <div class="button chapter-button"><%= link_to "View" %></div>
+    </div>
+
   <% @chapters.each do |chapter| %>
     <div class="card-main course-card">
-    	<h2><%=chapter.title%></h2> <div class="button chapter-button"><%= link_to "Open Chapter", chapter %></div>
+    	<h2><%=chapter.title%></h2> <div class="button chapter-button">
+    		<%= image_tag(chapter.id.to_s+".jpg", :alt => "chapter image") %>
+    		<br><%= link_to "Open Chapter", chapter %>
+    	</div>
     	<hr>
-    	<p>Mauris sollicitudin eros id ipsum blandit imperdiet. Sed iaculis neque et lacus tempor rhoncus. Sed sem sem, ultricies nec massa vel, fermentum pretium nisi. Sed ut enim nisl. Mauris sapien justo, laoreet quis tincidunt et, dictum id odio. In dapibus risus nec euismod aliquam. In hac habitasse platea dictumst. Suspendisse in nisl in magna vulputate condimentum. Quisque viverra eget tortor vel molestie.</p>
+    	<p><%=chapter.description%></p>
     </div>
   <% end %>
+
+    <div class="card-main course-card">
+    	<h2>Chapter 4: Next Steps</h2> <div class="button chapter-button"><%= link_to "View" %></div>
+    	<hr>
+    	<p>In the concluding chapter you will be asked to reflect on where you will go from here to continue
+			to develop your practice of Cultural Safety. You will be given resources to continue this journey
+			and the blessings to bravely move forward into uncharted territory.</p>
+    </div>
 </div>

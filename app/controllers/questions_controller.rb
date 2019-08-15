@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
       @last = true
     end
 
-    if @question.choices
+    if @question.choices && @question.style != "MEDIA"
       @choices = JSON.parse(@question.choices)
     end
 

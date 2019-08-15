@@ -4,6 +4,16 @@
 
 <!-- <h1>	<%= link_to @step.chapter.title, chapter_path(@step.chapter) %></h1> -->
 
+<div class="bottom-links">
+	<div type="button" class="link-left">
+		<i class="fa fa-arrow-left"></i>
+		<%= link_to "Back to chapter", chapter_path(@step.chapter)%></div>
+	<div type="button" class="link-right">
+		Next: &nbsp; <%= link_to @questions.first.title, @questions.first %>
+		<i class="fa fa-arrow-right"></i>
+		</div>
+</div>
+
 <h3>
   <strong><%= @step.title %></strong>
 </h3>
@@ -26,11 +36,5 @@
 <% else %>
 	Video not yet uploaded<br><br>
 <% end %>
-
-
-<div class="bottom-links">
-	<%= link_to "Back to chapter", chapter_path(@step.chapter), { :class=>"link-left" } %>
-	<div type="button" class="link-right">Next: &nbsp; <%= link_to @questions.first.title, @questions.first, { :class=>"link-right" } %></div>
-</div>
 
 </div>

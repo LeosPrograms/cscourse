@@ -2,16 +2,42 @@
 
 <p id="notice"><%= notice %></p>
 
+<div class="bottom-links">
+	<div type="button" class="link-left">
+		<i class="fa fa-arrow-left"></i>
+		<% if @first %>
+			<%= link_to "Back to lesson", step_path(@question.step)%>
+		<% else %>
+			<%= link_to 'Previous', {:id => @question.id - 1} %>
+		<% end %>
+	</div>
+	<div type="button" class="link-right">
+		Next: &nbsp;
+		<% if @last %>
+			<%= link_to "Save and finish", chapter_path(@question.step.chapter) %>
+		<% else %>
+			<%= link_to 'Save and continue', {:id => @question.id + 1} %>
+		<% end %>
+
+		<i class="fa fa-arrow-right"></i>
+		</div>
+</div>
+
+
 <p>
   <h3><%= @question.title %></h3>
 </p>
 
+<% if @question.style != 'MEDIA' %>
 <p>
 	In reference to: <strong><%= @question.step.title %></strong>
 </p>
+<% end %>
 
 
-
+<% if @question.style == 'MEDIA' %>
+	<iframe src=<%= @question.choices %> width="760" height="515" frameborder="0" allowfullscreen=""></iframe>
+<% end %>
 
 <% if @question.style == 'MC' %>
 	<%= form_with(model: @question, local: true) do |form| %>
@@ -46,22 +72,6 @@
 		<p><%= item %></p>
 		<%= select_tag "city", options_for_select(@choices['definitions']) %><br><br>
 	<% end %>
-<% end %>
-
-
-
-
-
-<% if @first %>
-	<%= link_to "Back to lesson", step_path(@question.step), { :class=>"link-left" } %>
-<% else %>
-	<%= link_to 'Previous', {:id => @question.id - 1}, { :class=>"link-left" } %>
-<% end %>
-
-<% if @last %>
-	<%= link_to "Save and finish", chapter_path(@question.step.chapter), { :class=>"link-right" } %>
-<% else %>
-	<%= link_to 'Save and continue', {:id => @question.id + 1}, { :class=>"link-right" } %>
 <% end %>
 
 </div>
