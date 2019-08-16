@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'password_resets/edit'
 
   root   'static#home'
+
+  get  '/static/:id', to: 'static#resources', as: 'resources'
+
   get    '/signup',  to: 'users#new'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

@@ -4,19 +4,19 @@
 
 <!-- <h1>	<%= link_to @step.chapter.title, chapter_path(@step.chapter) %></h1> -->
 
+<h2>
+  <%= @step.title %>
+</h2>
+
 <div class="bottom-links">
 	<div type="button" class="link-left">
 		<i class="fa fa-arrow-left"></i>
 		<%= link_to "Back to chapter", chapter_path(@step.chapter)%></div>
 	<div type="button" class="link-right">
-		Next: &nbsp; <%= link_to @questions.first.title, @questions.first %>
+		Continue to <%= link_to @questions.first.title, @questions.first %>
 		<i class="fa fa-arrow-right"></i>
 		</div>
 </div>
-
-<h2>
-  <strong><%= @step.title %></strong>
-</h2>
 
 <p>
   Watch the following before moving on:

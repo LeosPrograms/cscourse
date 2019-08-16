@@ -101,7 +101,7 @@ your own experiences of race.")
 
   c1s4 = Step.create!(title:  "Lesson 3: Micro-agressions",
                       media: "https://www.youtube.com/embed/ZahtlxW2CIQ", chapter: c1)
-    c1s4q1 = Question.create!(title: "Step 2: Implicit Bias QUIZ", style: 'MC', step: c1s4,
+    c1s4q1 = Question.create!(title: "Step 2: Micro-agressions QUIZ", style: 'MC', step: c1s4,
                       instructions: "From the Microagressions in the Classroom video: “A microagression is something that someone says about some aspect of your identity that makes you feel insulted or slighted, even if they didn’t intend it.”  There are three types of microaggresions:  microassaults, microinsults, and microinvalidations.",
                       choices: '[{"statement": "The following is true about microaggressions",
                                   "options": ["Microaggressions are subtly insulting statements made to people of color, but are more “micro” in their impact than blatantly racist statements.",
@@ -161,10 +161,10 @@ your own experiences of race.")
   c1s6 = Step.create!(title:  "Lesson 5: The Illusion of Race",
                       media: "https://player.vimeo.com/video/133506632", chapter: c1)
     c1s6q1 = Question.create!(title: "Step 2: The Wealth Gap QUIZ", style: 'MC', step: c1s6,
-                      choices: '[{"statement": "Which if the following best describes the practice of “redlining” in the mid-1900’s?", 
+                      choices: '[{"statement": "Which if the following best describes the practice of \"redlining\"" in the mid-1900’s?", 
                                   "options": ["The process of home appraisal, based on government guidelines, that involved assigning lower appraisal values to homes in integrated or all-minority neighborhoods.",
                                     "A process by which mortgage brokers would deny mortgages to non-white families based on their own personal biases and risk assessment.",
-                                    "The excessive policing of neighborhoods where black and other minority groups lived, which caused what is known as “white flight.”",
+                                    "The excessive policing of neighborhoods where black and other minority groups lived, which caused what is known as \"white flight.\"",
                                     "The practice by realtors of drawing a red line around the nicest neighborhoods and refusing to sell to blacks in those neighborhoods to prevent non-white people from infiltrating local churches and public schools."]},
                                 {"statement": "During the home ownership boom as a result of the post WWII GI bill, and the availability of FHA-backed loans, black people as a whole did not benefit from the bill anywhere near as much as white people did because:",
                                   "options": ["Very few black people were able to qualify for loans because of stringent requirements.",
@@ -185,8 +185,7 @@ your own experiences of race.")
                                   "options": ["Colorblindness, at its best, promotes the equality of white people and people of color by ensuring equal opportunities in housing, education, and employment.",
                                     "Being blind to a person’s color creates an illusion of equality, when in fact society is deeply segregated along racial lines.  This illusion prevents society from attending to the root issues of inequality.",
                                     "If individuals and institutions would take colorblindness seriously, everyone would have equal opportunities and their would be no racial gap.",
-                                    "People of color are the biggest proponents of the colorblind ideal because they are the ones that benefit most from it."]}
-                                  ]')
+                                    "People of color are the biggest proponents of the colorblind ideal because they are the ones that benefit most from it."]}]')
   c1s7 = Step.create!(title:  "Lesson 6: The Power of an Illusion.",
                       instructions: "California Newsreel. (2003). RACE: The Power of an Illusion.   Read through the six tabs on this website and do the exercises. You may have to download Adobe Flash Player 6 to do the exercises.  When you are finished take the quiz.",
                       media2: "http://www.pbs.org/race/000_General/000_00-Home.htm", chapter: c1)

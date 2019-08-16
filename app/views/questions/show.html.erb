@@ -1,6 +1,10 @@
-<div class="container left-container">
+<div class="container center-container">
 
 <p id="notice"><%= notice %></p>
+
+<h2>
+	<%= @question.step.title %>
+</h2>
 
 <div class="bottom-links">
 	<div type="button" class="link-left">
@@ -12,20 +16,19 @@
 		<% end %>
 	</div>
 	<div type="button" class="link-right">
-		Next: &nbsp;
 		<% if @last %>
 			<%= link_to "Save and finish", chapter_path(@question.step.chapter) %>
 		<% else %>
-			<%= link_to 'Save and continue', {:id => @question.id + 1} %>
+				Continue to 
+				<%= link_to Question.find(@question.id+1).title, {:id => @question.id + 1} %>
 		<% end %>
 
 		<i class="fa fa-arrow-right"></i>
 		</div>
 </div>
 
-<h2>
-	<strong><%= @question.step.title %></strong>
-</h2>
+</div>
+<div class="container left-container">
 
 <p>
   <h3><%= @question.title %></h3>

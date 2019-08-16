@@ -37,6 +37,12 @@
 .bottom-links {
   display: inline-block;
   width: 100% !important;
+
+  .link-right {
+    max-width: 400px;
+    line-height: 25px;
+    // text-align: right;
+  }
 }
 
 .bottom-links div {
